@@ -1,0 +1,13 @@
+syntax = "proto3";
+ 
+
+package pb_msgs;
+
+message agreement {
+  double id = 1;
+  double x = 2;
+  double y = 3;
+  double z = 4;
+ 
+  bool flag = 5;
+}

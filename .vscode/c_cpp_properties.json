@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/cherish/code/yuquan/test_ros/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/cherish/code/yuquan/test_ros/src/ball_test/include/**",
+        "/home/cherish/code/yuquan_test/test_demo/src/fdilink_ahrs/include/**",
+        "/home/cherish/code/yuquan/test_ros/src/joy_control_Twip_api/include/**",
+        "/home/cherish/code/yuquan_test/test_demo/src/kindr/include/**",
+        "/home/cherish/code/yuquan/test_ros/src/pegasus_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,6 @@
+
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE"
+       value="$(find log_test)/setting.conf"/>
+  <node pkg="log_test" type="log_test" name="log_test" output="screen"/>
+</launch>
