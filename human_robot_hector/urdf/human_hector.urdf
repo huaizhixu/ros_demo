@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="human_robot_hector">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.6714E-08 -2.6353E-07 -0.0065503"
+        rpy="0 0 0" />
+      <mass
+        value="88.72" />
+      <inertia
+        ixx="4.6483"
+        ixy="-1.0811E-07"
+        ixz="6.5342E-08"
+        iyy="3.659"
+        iyz="6.4458E-07"
+        izz="1.1897" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.83922 0.83922 0.92157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="R_hip_Link">
+    <inertial>
+      <origin
+        xyz="0.088278 -0.023018 -0.071371"
+        rpy="0 0 0" />
+      <mass
+        value="1.4628" />
+      <inertia
+        ixx="0.0039716"
+        ixy="0.0003283"
+        ixz="0.00074132"
+        iyy="0.0036146"
+        iyz="-0.00033204"
+        izz="0.0030335" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_hip_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_hip_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.125 -0.39"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_hip_Link" />
+    <axis
+      xyz="0 0 1" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="R_hip2_Link">
+    <inertial>
+      <origin
+        xyz="0.0216 0.00020802 9.4489E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.3887" />
+      <inertia
+        ixx="0.0030783"
+        ixy="6.5918E-07"
+        ixz="-3.6417E-07"
+        iyy="0.0040557"
+        iyz="-3.6085E-07"
+        izz="0.0016242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_hip2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_hip2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_hip2_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.03 -0.1"
+      rpy="0 0 0" />
+    <parent
+      link="R_hip_Link" />
+    <child
+      link="R_hip2_Link" />
+    <axis
+      xyz="1 0 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="R_thigh_Link">
+    <inertial>
+      <origin
+        xyz="-4.0045E-05 -0.0055364 -0.10619"
+        rpy="0 0 0" />
+      <mass
+        value="3.9044" />
+      <inertia
+        ixx="0.04409"
+        ixy="-1.418E-05"
+        ixz="-2.3239E-05"
+        iyy="0.045675"
+        iyz="9.3539E-06"
+        izz="0.0063298" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_thigh_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_thigh_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.065 0"
+      rpy="0 0.5236 0" />
+    <parent
+      link="R_hip2_Link" />
+    <child
+      link="R_thigh_Link" />
+    <axis
+      xyz="0 1 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="R_calf_Link">
+    <inertial>
+      <origin
+        xyz="0.0016938 1.4945E-06 -0.13884"
+        rpy="0 0 0" />
+      <mass
+        value="1.0718" />
+      <inertia
+        ixx="0.014327"
+        ixy="-2.9553E-09"
+        ixz="-1.9753E-05"
+        iyy="0.014368"
+        iyz="-1.1081E-07"
+        izz="0.00067215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_calf_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_calf_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="0 -1.0472 0" />
+    <parent
+      link="R_thigh_Link" />
+    <child
+      link="R_calf_Link" />
+    <axis
+      xyz="0 1 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="R_toe_Link">
+    <inertial>
+      <origin
+        xyz="0.016527 6.3197E-06 -0.03492"
+        rpy="0 0 0" />
+      <mass
+        value="0.46862" />
+      <inertia
+        ixx="0.00022464"
+        ixy="-4.2581E-07"
+        ixz="0.00021361"
+        iyy="0.0013555"
+        iyz="6.6812E-08"
+        izz="0.0012556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_toe_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/R_toe_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_toe_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="0 0.5236 0" />
+    <parent
+      link="R_calf_Link" />
+    <child
+      link="R_toe_Link" />
+    <axis
+      xyz="0 1 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="L_hip_Link">
+    <inertial>
+      <origin
+        xyz="0.088278 0.02302 -0.071363"
+        rpy="0 0 0" />
+      <mass
+        value="1.4628" />
+      <inertia
+        ixx="0.0039716"
+        ixy="-0.00032837"
+        ixz="0.00074099"
+        iyy="0.0036148"
+        iyz="0.00033237"
+        izz="0.0030333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_hip_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_hip_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.125 -0.39"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_hip_Link" />
+    <axis
+      xyz="0 0 1" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="L_hip2_Link">
+    <inertial>
+      <origin
+        xyz="0.021636 -0.00020817 -3.6813E-06"
+        rpy="0 0 0" />
+      <mass
+        value="1.3887" />
+      <inertia
+        ixx="0.0030785"
+        ixy="7.3859E-07"
+        ixz="-1.6001E-07"
+        iyy="0.0040557"
+        iyz="-1.4123E-07"
+        izz="0.001624" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_hip2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_hip2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_hip2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.03 -0.1"
+      rpy="0 0 0" />
+    <parent
+      link="L_hip_Link" />
+    <child
+      link="L_hip2_Link" />
+    <axis
+      xyz="1 0 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="L_thigh_Link">
+    <inertial>
+      <origin
+        xyz="0.00010967 0.0047236 -0.10618"
+        rpy="0 0 0" />
+      <mass
+        value="3.9044" />
+      <inertia
+        ixx="0.04409"
+        ixy="1.2741E-05"
+        ixz="6.499E-05"
+        iyy="0.045675"
+        iyz="-8.791E-06"
+        izz="0.0063299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_thigh_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.90196 0.92157 0.92157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_thigh_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_thigh_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.06635 0"
+      rpy="0 0.5236 0" />
+    <parent
+      link="L_hip2_Link" />
+    <child
+      link="L_thigh_Link" />
+    <axis
+      xyz="0 -1 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  
+  
+  
+  
+  <link
+    name="L_calf_Link">
+    <inertial>
+      <origin
+        xyz="0.0016958 0.00069082 -0.13884"
+        rpy="0 0 0" />
+      <mass
+        value="1.0718" />
+      <inertia
+        ixx="0.014327"
+        ixy="2.1317E-07"
+        ixz="-1.9555E-05"
+        iyy="0.014367"
+        iyz="6.8422E-05"
+        izz="0.00067249" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_calf_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_calf_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_calf_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="-0.0099996 -1.0472 0.0057731" />
+    <parent
+      link="L_thigh_Link" />
+    <child
+      link="L_calf_Link" />
+    <axis
+      xyz="-0.0028867 -0.99998 -0.0049999" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+  <link
+    name="L_toe_Link">
+    <inertial>
+      <origin
+        xyz="0.016527 0.00019512 -0.03492"
+        rpy="0 0 0" />
+      <mass
+        value="0.46862" />
+      <inertia
+        ixx="0.00022464"
+        ixy="-4.2581E-07"
+        ixz="0.00021361"
+        iyy="0.0013555"
+        iyz="6.6812E-08"
+        izz="0.0012556" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_toe_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_robot_hector/meshes/L_toe_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_toe_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.4"
+      rpy="0.0057734 0.52359 0" />
+    <parent
+      link="L_calf_Link" />
+    <child
+      link="L_toe_Link" />
+    <axis
+      xyz="0 1 0" />
+      <limit effort="30" velocity="1.0" lower="-3.14" upper="3.14" />
+  </joint>
+</robot>
